@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Check Out
-        users: actions/checkout@v2.4.0
+        uses: actions/checkout@v2.4.0
         with:
           persist-credentials: false
 
       - name: Setup Node
-        users: actions/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: '16.x'
 
@@ -30,7 +30,7 @@ jobs:
         run: npm run build
 
       - name: Deploy
-        users: JamesIves/github-pages-deploy-action@v4.2.2
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           folder: ./build
