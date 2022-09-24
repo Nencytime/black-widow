@@ -1,0 +1,22 @@
+.button {
+  margin: 0;
+  padding: 22px 45px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition-duration: 300ms;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

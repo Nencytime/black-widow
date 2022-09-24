@@ -1,0 +1,180 @@
+.review {
+  position: relative;
+
+  padding-top: 120px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -100%;
+    z-index: 1;
+
+    width: 1000%;
+    height: 1%;
+
+    background-color: $color-alizarin;
+  }
+}
+
+.review__title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid $color-white;
+}
+
+.review__title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.review__counter span {
+  color: rgba($color-white, 0.5);
+}
+
+.review__list {
+  display: grid;
+  margin: 0;
+  margin-bottom: 120px;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.review__item {
+  display: grid;
+
+  gap: 45px;
+  grid-template-columns: 2fr 1.9fr;
+}
+
+.review__people {
+  display: flex;
+  flex-direction: column;
+}
+
+.review__name {
+  margin-bottom: 5px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.review__job {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.review__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 37px;
+}
+
+.review__description {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.review__link {
+  margin: 0;
+  padding: 10px 0;
+
+  text-align: start;
+  color: $color-alizarin;
+  text-transform: none;
+  text-decoration: underline;
+
+  border: none;
+}
+
+.review__button-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.review__button {
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+
+  background-color: $color-transparent;
+  border: 1px solid $color-white;
+
+  &--back,
+  &--forward {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 45px;
+      height: 44px;
+
+      background-image: url("../img/background/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--forward {
+    margin-left: 10px;
+
+    &::before {
+      transform: scale(-1);
+    }
+  }
+}
+
+.review__people-container {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 348px;
+
+    background-image: url("../img/background/mask.png");
+    background-size: cover;
+  }
+}
+
+.review__people-image {
+  z-index: -1;
+
+  display: block;
+
+  object-fit: cover;
+}

@@ -1,0 +1,80 @@
+.advertising {
+  position: relative;
+  z-index: 2;
+
+  padding: 116px 0;
+
+  background-color: $color-alizarin;
+}
+
+.advertising__title {
+  margin: 0 0 60px;
+  padding: 0 0 20px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid $color-white;
+}
+
+.advertising__description {
+  margin: 0 0 60px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 73px;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+}
+
+.advertising__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 60px 30px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.advertising__item-endgame {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.advertising__item-ultron {
+  grid-area: 2 / 3 / 3 / 5;
+}
+
+.advertising__image {
+  display: block;
+
+  transition-duration: 300ms;
+  transition-property: transform;
+}
+
+.advertising__link {
+  margin: 0;
+  padding: 0;
+
+  color: $color-white;
+  text-decoration: none;
+
+  &:hover .advertising__image {
+    transform: scale(1.05);
+  }
+}
+
+.advertising__item {
+  position: relative;
+}
+
+.advertising__link-title {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  z-index: 1;
+}

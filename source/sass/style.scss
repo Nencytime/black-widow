@@ -1,0 +1,22 @@
+// Global
+
+@import "./global/fonts.scss";
+@import "./global/reboot.scss";
+@import "./global/units.scss";
+@import "./global/variables.scss";
+@import "./global/container.scss";
+
+// Blocks
+
+@import "./blocks/page.scss";
+@import "./blocks/header.scss";
+@import "./blocks/button.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/information.scss";
+@import "./blocks/actor.scss";
+@import "./blocks/review.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/promotion.scss";
+@import "./blocks/advertising.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/contacts.scss";
