@@ -1,5 +1,12 @@
 .header {
-  padding: 0 69px 0 72px;
+  position: absolute;
+  padding: 30px 0;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    padding: 0 69px 0 72px;
+  }
 }
 
 .header-intro {
@@ -58,6 +65,11 @@
   letter-spacing: -3px;
 }
 
+.header__toggle {
+  background-color: $color-blue;
+  border: none;
+}
+
 .header__description {
   font-size: 22px;
   line-height: 26px;
@@ -94,19 +106,6 @@
   }
 }
 
-.header__button-container {
-  width: max-content;
-  background-color: $color-alizarin;
-  border: none;
-}
-
-.header__button {
-  font-weight: 500;
-  color: $color-white;
-  text-decoration: none;
-  border: none;
-}
-
 .header__block {
   display: flex;
   align-items: center;
@@ -114,4 +113,67 @@
 
 .header__rating {
   margin-left: 18px;
+}
+
+.header__menu-wrapper {
+  position: absolute;
+  top: 34px;
+  right: 15px;
+  margin: auto;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__menu-burger {
+  position: relative;
+  transform: translateY(10px);
+  width: 40px;
+  height: 2px;
+  background: $color-white;
+  transition: all 0ms 300ms;
+
+  &::before,
+  &::after {
+    width: 40px;
+    height: 2px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    background: $color-white;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background: $color-white;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &.animate {
+    background: $color-transparent;
+
+    &::after {
+      top: 0;
+      transform: rotate(45deg);
+      transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+    }
+
+    &::before {
+      bottom: 0;
+      transform: rotate(-45deg);
+      transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+    }
+  }
 }

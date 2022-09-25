@@ -5,6 +5,11 @@
 
   background-color: $color-transparent;
 
+  .is-open & {
+    position: absolute;
+    flex-direction: column;
+  }
+
   &--footer {
     margin-left: 21%;
   }

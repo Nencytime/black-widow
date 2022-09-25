@@ -41,22 +41,37 @@
 }
 
 .review__list {
-  display: grid;
   margin: 0;
-  margin-bottom: 120px;
-  padding: 0;
-
   list-style-type: none;
+  padding: 0;
+  order: -1;
 
-  gap: 30px;
-  grid-template-columns: 1fr 1fr;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    margin-bottom: 120px;
+
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .review__item {
-  display: grid;
 
-  gap: 45px;
-  grid-template-columns: 2fr 1.9fr;
+  &:last-of-type {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+
+    gap: 45px;
+    grid-template-columns: 2fr 1.9fr;
+  }
 }
 
 .review__people {
@@ -65,13 +80,54 @@
 }
 
 .review__name {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 5px;
+  }
 }
+
+.review__people-container {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 300px;
+
+    background-image: url("../img/background/mask.png");
+    background-size: cover;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+  }
+}
+
+.review__people-image {
+  z-index: -1;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
 
 .review__job {
   font-size: 14px;
@@ -81,7 +137,11 @@
 .review__info {
   display: flex;
   flex-direction: column;
-  margin-top: 37px;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 37px;
+  }
 }
 
 .review__description {
@@ -95,15 +155,20 @@
 }
 
 .review__link {
-  margin: 0;
-  padding: 10px 0;
+  display: none;
 
-  text-align: start;
-  color: $color-alizarin;
-  text-transform: none;
-  text-decoration: underline;
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin: 0;
+    padding: 10px 0;
 
-  border: none;
+    text-align: start;
+    color: $color-alizarin;
+    text-transform: none;
+    text-decoration: underline;
+
+    border: none;
+  }
 }
 
 .review__button-container {
@@ -111,6 +176,9 @@
   justify-content: end;
   align-items: center;
   margin: 30px auto;
+
+  @media (min-width: $tablet-width) {
+  }
 }
 
 .review__button {
@@ -148,33 +216,4 @@
       transform: scale(-1);
     }
   }
-}
-
-.review__people-container {
-  position: relative;
-
-  margin-bottom: 20px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    width: 100%;
-    height: 348px;
-
-    background-image: url("../img/background/mask.png");
-    background-size: cover;
-  }
-}
-
-.review__people-image {
-  z-index: -1;
-
-  display: block;
-
-  object-fit: cover;
 }

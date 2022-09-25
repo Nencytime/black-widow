@@ -13,14 +13,21 @@
 }
 
 .contacts__title {
-  margin: 0;
+  margin: 0 0 20px;
   padding: 0;
-
   font-weight: 700;
-  font-size: 62px;
-  line-height: 73px;
+  font-size: 40px;
+  line-height: 100%;
+
   text-transform: uppercase;
-  letter-spacing: -3px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: -3px;
+    font-size: 62px;
+    line-height: 73px;
+    margin: 0;
+  }
 }
 
 .contacts__list {
@@ -37,13 +44,17 @@
 
   width: 47px;
   height: 47px;
-  margin-right: 21px;
+  margin-right: 10px;
 
   border: 0.5px solid $color-white;
   border-radius: 50%;
 
   transition-duration: 300ms;
   transition-property: transform;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 21px;
+  }
 
   &:hover {
     transform: scale(1.2);

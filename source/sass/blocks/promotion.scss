@@ -1,17 +1,21 @@
 .promotion {
   position: relative;
-  position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 257px;
-  padding-bottom: 203px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 203px;
+    padding-top: 257px;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
     z-index: -1;
 
@@ -20,9 +24,13 @@
 
     background-color: $color-alizarin;
     border-radius: 50%;
-    // filter: blur(150px);
-    box-shadow: 0 0 270px 170px $color-alizarin;
+    box-shadow: 0 0 135px 90px $color-alizarin;
     transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet-width) {
+      top: 50%;
+      box-shadow: 0 0 270px 170px $color-alizarin;
+    }
   }
 }
 
@@ -31,50 +39,61 @@
   padding: 0;
 
   font-weight: 700;
-  font-size: 110px;
+  font-size: 40px;
   line-height: 100%;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: -3px;
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: -3px;
+    font-size: 110px;
+
+    span {
+      color: $color-alizarin;
+    }
+  }
 }
 
 .promotion__logo {
+  width: 89px;
+  height: auto;
   display: block;
   order: -1;
   margin-bottom: 15px;
-}
 
-.promotion__title-special {
-  color: $color-alizarin;
+  @media (min-width: $tablet-width) {
+    width: 209px;
+  }
 }
 
 .promotion__image {
-  position: absolute;
-  top: 30%;
-  right: 5%;
-  z-index: -1;
+  display: none;
 
-  &--2 {
-    top: 70%;
-    right: 13%;
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: -1;
+
+    &--2 {
+      top: 70%;
+      right: 13%;
+    }
+
+    &--3 {
+      top: 70%;
+      left: 18%;
+    }
+
+    &--4 {
+      top: 42%;
+      left: 7%;
+    }
+
+    &--5 {
+      top: 14%;
+      left: 28%;
+    }
   }
-
-  &--3 {
-    top: 70%;
-    left: 18%;
-  }
-
-  &--4 {
-    top: 42%;
-    left: 7%;
-  }
-
-  &--5 {
-    top: 14%;
-    left: 28%;
-  }
-}
-
-.promotion__button {
-  border: 1px solid $color-white;
 }

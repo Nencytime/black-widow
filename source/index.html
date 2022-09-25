@@ -21,12 +21,19 @@
     <!-- Шапка -->
 
     <div class="header-intro">
-      <header class="header">
-        <div class="header__nav">
-          <a class="header__link-marvel" href="#">
-            <img class="header__marvel-image" src="img/logo/logo-marvel.png" width="152" height="152" srcset="img/logo/logo-marvel@2x.png 2x" alt=".">
-          </a>
+      <header class="header no-js">
+        <a class="header__link-marvel" href="#">
+          <img class="header__marvel-image" src="img/logo/logo-marvel.png" width="152" height="152" srcset="img/logo/logo-marvel@2x.png 2x" alt=".">
+        </a>
+
+        <div class="navigation__container navigation__container--header">
           <nav class="navigation">
+            <button class="header__toggle" type="button">
+              <div class="header__menu-wrapper">
+                <div class="header__menu-burger"></div>
+              </div>
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a class="navigation__link" href="#">О фильме</a>
@@ -41,8 +48,8 @@
                 <a class="navigation__link" href="#">Другие фильмы</a>
               </li>
             </ul>
+            <a class="navigation__link navigation__link--subscribe" href="#">Подписка Дисней+</a>
           </nav>
-          <a class="navigation__link navigation__link--subscribe" href="#">Подписка Дисней+</a>
         </div>
         <div class="header__info">
           <p class="header__description">В кино с 8 июля</p>
@@ -93,6 +100,8 @@
                 <a class="information__people-link" href="#">В главных ролях</a>
               </li>
             </ul>
+          </div>
+          <div class="information__producer">
             <ul class="information__producer-list">
               <li class="information__producer-item">
                 <div class="information__image-containe">
@@ -120,13 +129,13 @@
               </li>
             </ul>
           </div>
-          <div class="information__history">
+        </div>
+        <div class="information__history">
             <p class="information__history-description">
-              <span class="information__history-special">предыстория</span> Наташи Романофф до того, как она стала одной из команды Мстителей</p>
-              <div class="information__history-container">
-                <img class="information__history-image" src="img/content/information-natasha.png" srcset="img/content/information-natasha@2x.png 2x" width="455" height="605" alt=".">
-              </div>
-          </div>
+              <span>предыстория</span> Наташи Романофф до того, как она стала одной из команды Мстителей</p>
+            <div class="information__history-container">
+              <img class="information__history-image" src="img/content/information-natasha.png" srcset="img/content/information-natasha@2x.png 2x" width="455" height="605" alt=".">
+            </div>
         </div>
       </section>
 
@@ -187,7 +196,7 @@
                 </div>
                 <div class="review__info">
                   <p class="review__description">Форма не затмевает содержание, в котором есть и глубина, и ирония, и все то, чем славятся фильмы Marvel — создатели этого мира любят покопаться в душах и головах его обитателей, которые, как правило, становятся героями не от хорошей жизни.</p>
-                  <a class="button review__link" href="#">Читать полностью</a>
+                  <a class="link review__link" href="#">Читать полностью</a>
                 </div>
               </li>
               <li class="review__item">
@@ -200,12 +209,13 @@
                 </div>
                 <div class="review__info">
                   <p class="review__description">Новая лента Кейт Шортланд не только исправляет несправедливость в отношении единственной женщины в рядах Мстителей, у которой нет своего сольного приключения, но и проливает свет на прошлое героини.</p>
-                  <a class="button review__link" href="#">Читать полностью</a>
+                  <a class="link review__link" href="#">Читать полностью</a>
                 </div>
               </li>
             </ul>
+          </div>
           <div class="advantages">
-            <div class="advantages__container">
+            <div class="advantages__container container">
               <h2 class="advantages__title">фильмы на DISNEY+</h2>
               <div class="advantages__info">
                 <span class="advantages__info-title">COVID-19</span>
@@ -222,60 +232,59 @@
               <img class="advantages__image" src="img/content/advantages-natasha.png" srcset="img/content/advantages-natasha@2x.png 2x" width="589" height="690" alt=".">
             </div>
           </div>
-      </div>
       </section>
 
       <!-- Другие фильмы -->
 
       <section class="advertising">
         <div class="advertising__container container">
-        <h2 class="advertising__title">другие фильмы серии</h2>
-        <p class="advertising__description">смотрите также</p>
-        <ul class="advertising__list">
-          <li class="advertising__item advertising__item-endgame">
-            <a class="advertising__link" href="#" target="_blank">
-              <img class="advertising__image" src="img/advertising/avangers-endgame.jpg" srcset="img/advertising/avangers-endgame@2x.jpg 2x" width="630" height="400" alt=".">
-              <span class="advertising__link-title">Мстители: финал</span>
-            </a>
-          </li>
-          <li class="advertising__item">
-            <a class="advertising__link" href="#" target="_blank">
-              <img class="advertising__image" src="img/advertising/avangers-infinity-war.jpg" srcset="img/advertising/avangers-infinity-war@2x.jpg 2x" width="300" height="400" alt=".">
-              <span class="advertising__link-title">Мстители: Война Бесконечности</span>
-            </a>
-          </li>
-          <li class="advertising__item">
-            <a class="advertising__link" href="#" target="_blank">
-              <img class="advertising__image" src="img/advertising/captain-america-civil-war.jpg" srcset="img/advertising/captain-america-civil-war@2x.jpg 2x" width="300" height="400" alt=".">
-              <span class="advertising__link-title">Первый миститель: Противостояние</span>
-            </a>
-          </li>
-          <li class="advertising__item">
-            <a class="advertising__link" href="#" target="_blank">
-              <img class="advertising__image" src="img/advertising/avangers.jpg" srcset="img/advertising/avangers@2x.jpg 2x" width="300" height="400" alt=".">
-              <span class="advertising__link-title">Мстители</span>
-            </a>
-          </li>
-          <li class="advertising__item">
-            <a class="advertising__link" href="#" target="_blank">
-              <img class="advertising__image" src="img/advertising/captain-america-winter.jpg" srcset="img/advertising/captain-america-winter@2x.jpg 2x" width="300" height="400" alt=".">
-              <span class="advertising__link-title">Первый миститель: Другая война</span>
-            </a>
-          </li>
-          <li class="advertising__item advertising__item-ultron">
-            <a class="advertising__link" href="#" target="_blank">
-              <img class="advertising__image" src="img/advertising/avangers-age-of-ultron.jpg" srcset="img/advertising/avangers-age-of-ultron@2x.jpg 2x" width="630" height="400" alt=".">
-              <span class="advertising__link-title">Мстители: Эра Альтрона</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+          <h2 class="advertising__title">другие фильмы серии</h2>
+          <p class="advertising__description">смотрите также</p>
+          <ul class="advertising__list">
+            <li class="advertising__item advertising__item-endgame">
+              <a class="advertising__link" href="#" target="_blank">
+                <img class="advertising__image" src="img/advertising/avangers-endgame.jpg" srcset="img/advertising/avangers-endgame@2x.jpg 2x" width="630" height="400" alt=".">
+                <span class="advertising__link-title">Мстители: финал</span>
+              </a>
+            </li>
+            <li class="advertising__item">
+              <a class="advertising__link" href="#" target="_blank">
+                <img class="advertising__image" src="img/advertising/avangers-infinity-war.jpg" srcset="img/advertising/avangers-infinity-war@2x.jpg 2x" width="300" height="400" alt=".">
+                <span class="advertising__link-title">Мстители: Война Бесконечности</span>
+              </a>
+            </li>
+            <li class="advertising__item">
+              <a class="advertising__link" href="#" target="_blank">
+                <img class="advertising__image" src="img/advertising/captain-america-civil-war.jpg" srcset="img/advertising/captain-america-civil-war@2x.jpg 2x" width="300" height="400" alt=".">
+                <span class="advertising__link-title">Первый миститель: Противостояние</span>
+              </a>
+            </li>
+            <li class="advertising__item">
+              <a class="advertising__link" href="#" target="_blank">
+                <img class="advertising__image" src="img/advertising/avangers.jpg" srcset="img/advertising/avangers@2x.jpg 2x" width="300" height="400" alt=".">
+                <span class="advertising__link-title">Мстители</span>
+              </a>
+            </li>
+            <li class="advertising__item">
+              <a class="advertising__link" href="#" target="_blank">
+                <img class="advertising__image" src="img/advertising/captain-america-winter.jpg" srcset="img/advertising/captain-america-winter@2x.jpg 2x" width="300" height="400" alt=".">
+                <span class="advertising__link-title">Первый миститель: Другая война</span>
+              </a>
+            </li>
+            <li class="advertising__item advertising__item-ultron">
+              <a class="advertising__link" href="#" target="_blank">
+                <img class="advertising__image" src="img/advertising/avangers-age-of-ultron.jpg" srcset="img/advertising/avangers-age-of-ultron@2x.jpg 2x" width="630" height="400" alt=".">
+                <span class="advertising__link-title">Мстители: Эра Альтрона</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Промо -->
 
       <section class="promotion container">
-        <h2 class="promotion__title">погрузись во вселенную <span class="promotion__title-special">марвел</span>
+        <h2 class="promotion__title">погрузись во вселенную <span>марвел</span>
         </h2>
         <img class="promotion__logo" src="img/logo/logo-black-widow.png" srcset="img/logo/logo-black-widow@2x.png 2x" width="209" height="45" alt=".">
         <a class="button promotion__button" href="#">Купить билет</a>
@@ -294,7 +303,7 @@
 
       <section class="contacts">
         <div class="contacts__container container">
-          <h2 class="contacts__title">Следите за новостями</h2>
+          <h2 class="contacts__title">Следите за&nbsp;новостями</h2>
           <ul class="contacts__list">
             <li class="contacts__item">
               <a class="contacts__link contacts__link--instagram" href="#" aria-label="Аккаунт Дисней+ в Instagram" target="_blank">
@@ -339,37 +348,39 @@
               </a>
             </li>
           </ul>
-      </div>
+        </div>
       </section>
 
       <!-- Навигация -->
 
       <section class="navigation__footer container">
-          <h2 class="visually-hidden"></h2>
-          <div class="header__nav">
-            <a class="header__link-marvel" href="#">
-              <img class="header__marvel-image" src="img/logo/logo-marvel.png" width="152" height="152" srcset="img/logo/logo-marvel@2x.png 2x" alt=".">
-            </a>
-            <nav class="navigation navigation--footer">
-              <ul class="navigation__list">
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#">О фильме</a>
-                </li>
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#">Герои</a>
-                </li>
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#">Рецензии</a>
-                </li>
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#">Другие фильмы</a>
-                </li>
-              </ul>
-            </nav>
-            <a class="navigation__link navigation__link--subscribe" href="#">Подписка Дисней+</a>
-          </div>
+        <h2 class="visually-hidden"></h2>
+        <div class="header__nav">
+          <a class="header__link-marvel" href="#">
+            <img class="header__marvel-image" src="img/logo/logo-marvel.png" width="152" height="152" srcset="img/logo/logo-marvel@2x.png 2x" alt=".">
+          </a>
+          <nav class="navigation navigation--footer">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">О фильме</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Герои</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Рецензии</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Другие фильмы</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="navigation__link navigation__link--subscribe" href="#">Подписка Дисней+</a>
+        </div>
       </section>
       <p class="footer__info container">16+ (Информационная продукция, опубликованная на данном сайте, предназначена для аудитории в возрасте от 16 лет, если иное не указано дополнительно в отношении отдельных материалов)</p>
     </footer>
+    <script src="js/burger.js"></script>
+    <script src="js/header.js"></script>
   </body>
 </html>

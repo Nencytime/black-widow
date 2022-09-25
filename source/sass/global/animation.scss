@@ -1,16 +1,6 @@
-.button {
-  margin: 0;
-  padding: 22px 45px;
-
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
+.link {
   color: $color-white;
-  background-color: $color-alizarin;
-  text-transform: uppercase;
   text-decoration: none;
-  border: none;
-  width: max-content;
 
   transition-duration: 300ms;
   transition-property: transform;
