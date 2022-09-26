@@ -8,6 +8,7 @@
 
 .footer__info {
   margin: 0 auto;
+  max-width: 450px;
 
   font-weight: 400;
   font-size: 12px;
@@ -15,10 +16,11 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
+    width: 80%;
+    max-width: none;
   }
 
-  @media (min-width: $tablet-width) {
-    width: 30%;
+  @media (min-width: $desktop-width) {
+    max-width: 570px;
   }
 }

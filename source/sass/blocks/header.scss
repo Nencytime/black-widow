@@ -1,33 +1,39 @@
 .header {
-  position: absolute;
   padding: 30px 0;
   width: 100%;
 
+  &.is-open {
+    background-color: $color-alizarin;
+  }
+
   @media (min-width: $tablet-width) {
-    position: static;
-    padding: 0 69px 0 72px;
+    padding: 60px 69px 0 72px;
   }
 }
 
 .header-intro {
   position: relative;
   z-index: 1;
-  min-height: 852px;
+
   background-repeat: no-repeat;
   background-position: right;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 30%;
-    z-index: -1;
+  @media (min-width: $tablet-width) {
+    min-height: 852px;
 
-    background-image: url("../img/background/header-background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 30%;
+      z-index: -1;
+
+      background-image: url("../img/background/header-background.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   &::after {
@@ -35,12 +41,18 @@
     z-index: 2;
     content: "";
     bottom: 0;
-    top: 850px;
     right: 0;
-    height: 100px;
+    height: 10px;
     background-color: $color-black;
     width: 600px;
-    box-shadow: 0 0 65px 75px $color-black;
+    box-shadow: 0 0 65px 80px $color-black;
+
+    @media (min-width: $tablet-width) {
+      bottom: -50px;
+      height: 100px;
+      right: 20px;
+      box-shadow: 0 0 65px 75px $color-black;
+    }
   }
 }
 
@@ -53,27 +65,32 @@
 
 .header__info {
   margin-top: 210px;
+  padding: 0 15px 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .header__title {
   font-weight: 700;
-  font-size: 110px;
-  line-height: 110%;
-  margin: 0 0 10px;
+  font-size: 75px;
+  line-height: 100%;
+  margin: 0 0 30px;
   padding: 0;
   text-transform: uppercase;
-  letter-spacing: -3px;
-}
 
-.header__toggle {
-  background-color: $color-blue;
-  border: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 110px;
+    letter-spacing: -3px;
+  }
 }
 
 .header__description {
   font-size: 22px;
   line-height: 26px;
-  margin: 0 0 6px;
+  margin: 0 0 15px;
   padding: 0;
 }
 
@@ -87,15 +104,28 @@
 }
 
 .header__link-marvel {
-  margin: 0;
+  margin: 0 0 0 15px;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  .is-open & {
+    display: none;
+  }
 }
 
 .header__marvel-image {
-  display: block;
-  margin: -60px 0;
+  width: 81px;
+  height: 29px;
   transition-property: transform;
   transition-duration: 300ms;
+
+  @media (min-width: $tablet-width) {
+    width: 120px;
+    height: auto;
+  }
 
   &:hover {
     transform: scale(1.1);
@@ -115,14 +145,27 @@
   margin-left: 18px;
 }
 
+.header__image {
+  height: 501px;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .header__menu-wrapper {
   position: absolute;
-  top: 34px;
-  right: 15px;
-  margin: auto;
-  width: 40px;
-  height: 25px;
+  top: 8px;
+  right: 5px;
+  padding: 0 10px 20px;
+  width: 60px;
+  height: 65px;
   cursor: pointer;
+  border: none;
+  background-color: $color-transparent;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -130,7 +173,6 @@
 }
 
 .header__menu-burger {
-  position: relative;
   transform: translateY(10px);
   width: 40px;
   height: 2px;
@@ -147,7 +189,7 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: 10px;
+    bottom: 12px;
     background: $color-white;
     transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
@@ -156,7 +198,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 12px;
     background: $color-white;
     transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }

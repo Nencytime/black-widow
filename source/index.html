@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Черная вдова</title>
-    <!-- <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="manifest" href="manifest.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c"> -->
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="preload" href="/fonts/roboto-medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,34 +21,83 @@
     <!-- Шапка -->
 
     <div class="header-intro">
-      <header class="header no-js">
+      <header class="header">
         <a class="header__link-marvel" href="#">
-          <img class="header__marvel-image" src="img/logo/logo-marvel.png" width="152" height="152" srcset="img/logo/logo-marvel@2x.png 2x" alt=".">
+          <svg class="header__marvel-image" height="1006" viewBox="-215.19000000000005 -86.608 1000 402.473" width="2500" xmlns="http://www.w3.org/2000/svg"><path d="M-215.19-86.608h1000v402.473h-1000z" fill="#ed1d24"/><path d="M631.063 7.184v-61.603H459.644l-28.191 205.803-27.896-205.802H341.74L348.665.497c-7.14-14.068-32.449-54.915-88.146-54.915-.367-.024-61.901 0-61.901 0l-.237 299.974-45.057-299.974-80.959-.047-46.612 310.814.024-310.769h-77.483l-27.933 174.585-27.208-174.583h-77.508v337.906h61.036v-162.87l27.764 162.866h32.449l27.374-162.866v162.866H81.935l7.14-51.995h47.374l7.116 51.995 115.521.071h.094v-.071h.144V173.799l14.162-2.063 29.319 111.819h59.752l-.024-.071h.178l-38.475-131.057c19.498-14.422 41.513-51.047 35.654-86.084v-.023c.07.474 36.316 217.38 36.316 217.38l71.065-.216L515.83-22.8v306.285h115.236v-60.773h-54.7v-77.496h54.7V83.518h-54.7V7.184zM96.265 177.905l16.758-144.461 17.4 144.461zm177.419-66.704c-4.697 2.278-9.595 3.417-14.363 3.417V5.927c.083 0 .179-.022.297-.022 4.78-.024 40.419 1.446 40.419 53.774 0 27.373-12.121 44.62-26.353 51.522m480.36 111.464v60.772H641.63V-54.465h60.526v277.13z" fill="#fff"/></svg>
         </a>
-
         <div class="navigation__container navigation__container--header">
           <nav class="navigation">
-            <button class="header__toggle" type="button">
-              <div class="header__menu-wrapper">
-                <div class="header__menu-burger"></div>
-              </div>
+            <button class="header__toggle header__menu-wrapper" type="button">
+              <div class="header__menu-burger"></div>
               <span class="visually-hidden">Открыть меню</span>
             </button>
             <ul class="navigation__list">
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">О фильме</a>
+              <li class="navigation__second-list">
+                <ul class="navigation__second-list-container">
+                  <li class="navigation__item">
+                    <a class="navigation__link" href="#information-link">О фильме</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a class="navigation__link" href="#actor-link">Герои</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a class="navigation__link" href="#review-link">Рецензии</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a class="navigation__link" href="#advertising-link">Другие фильмы</a>
+                  </li>
+                </ul>
               </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">Герои</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">Рецензии</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">Другие фильмы</a>
+              <li class="navigation__third-list">
+                <div class="navigation__item">
+                  <a class="navigation__link navigation__link--subscribe" href="#">Подписка Дисней+</a>
+                </div>
+                <ul class="contacts__list contacts__list--header">
+                  <li class="contacts__item">
+                    <a class="contacts__link contacts__link--instagram" href="#" aria-label="Аккаунт Дисней+ в Instagram" target="_blank">
+                      <svg class="contacts__svg" width="20" height="20">
+                        <use href="img/sprite.svg#contacts-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="contacts__item">
+                    <a class="contacts__link contacts__link--vkontakte" href="#" aria-label="Аккаунт Дисней+ во Vkontakte" target="_blank">
+                      <svg class="contacts__svg" width="21" height="12">
+                        <use href="img/sprite.svg#contacts-vkontakte"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="contacts__item">
+                    <a class="contacts__link contacts__link--youtube" href="#" aria-label="Аккаунт Дисней+ на Youtube" target="_blank">
+                      <svg class="contacts__svg" width="21" height="15">
+                        <use href="img/sprite.svg#contacts-youtube"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="contacts__item">
+                    <a class="contacts__link contacts__link--odnoclassniky" href="#" aria-label="Аккаунт Дисней+ в Odnoclassniky" target="_blank">
+                      <svg class="contacts__svg" width="14" height="20">
+                        <use href="img/sprite.svg#contacts-odnoclassniky"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="contacts__item">
+                    <a class="contacts__link contacts__link--twitter" href="#" aria-label="Аккаунт Дисней+ в Twitter" target="_blank">
+                      <svg class="contacts__svg" width="24" height="20">
+                        <use href="img/sprite.svg#contacts-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="contacts__item">
+                    <a class="contacts__link contacts__link--facebook" href="#" aria-label="Аккаунт Дисней+ в Facebook" target="_blank">
+                      <svg class="contacts__svg" width="18" height="18">
+                        <use href="img/sprite.svg#contacts-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
-            <a class="navigation__link navigation__link--subscribe" href="#">Подписка Дисней+</a>
           </nav>
         </div>
         <div class="header__info">
@@ -64,12 +113,14 @@
             <span class="header__rating">IMDb: 7.8</span>
           </div>
         </div>
+        <img class="header__image" src="img/content/header-image.png" srcset="img/content/header-image@2x.png 2x" width="828" height="501" alt=".">
       </header>
     </div>
     <main class="main-container">
 
       <!-- О фильме -->
 
+      <p><a name="information-link"></a></p>
       <section class="information">
         <div class="information__container container">
           <h2 class="information__title">о фильме</h2>
@@ -77,7 +128,7 @@
             <span class="information__description-title">Новый блокбастер</span>
             <div class="information__description-block">
               <p class="information__description-text">Наташе Романофф предстоит лицом к лицу встретиться со своим прошлым. Чёрной Вдове придётся вспомнить о том, что было в её жизни задолго до присоединения к команде Мстителей, и узнать об опасном заговоре, в который оказываются втянуты её старые знакомые — Елена, Алексей (известный как Красный Страж) и Мелина.</p>
-              <div class="button button__information">
+              <div class="button__information">
                 <a class="information__description-link" href="#" aria-label="Показать трейлер"></a>
               </div>
             </div>
@@ -104,26 +155,38 @@
           <div class="information__producer">
             <ul class="information__producer-list">
               <li class="information__producer-item">
-                <div class="information__image-containe">
-                  <img class="information__producer-image" src="img/content/information-photo-1.jpg" srcset="img/content/information-photo-1@2x.jpg 2x" width="300" height="365" alt=".">
+                <div class="information__image-container">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/information-photo-1.webp 1x, img/content/information-photo-1@2x.webp 2x">
+                    <img class="information__producer-image" src="img/content/information-photo-1.jpg" srcset="img/content/information-photo-1@2x.jpg 2x" width="300" height="365" alt=".">
+                  </picture>
                 </div>
                 <span class="information__producer-name">Виктория Алонсо</span>
               </li>
               <li class="information__producer-item">
-                <div class="information__image-containe">
-                  <img class="information__producer-image" src="img/content/information-photo-2.jpg" srcset="img/content/information-photo-2@2x.jpg 2x" width="300" height="290" alt=".">
+                <div class="information__image-container">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/information-photo-2.webp 1x, img/content/information-photo-2@2x.webp 2x">
+                    <img class="information__producer-image" src="img/content/information-photo-2.jpg" srcset="img/content/information-photo-2@2x.jpg 2x" width="300" height="290" alt=".">
+                  </picture>
                 </div>
                 <span class="information__producer-name">Луис Де Испозито</span>
               </li>
               <li class="information__producer-item">
-                <div class="information__image-containe">
-                  <img class="information__producer-image" src="img/content/information-photo-3.jpg" srcset="img/content/information-photo-3@2x.jpg 2x" width="300" height="365" alt=".">
+                <div class="information__image-container">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/information-photo-3.webp 1x, img/content/information-photo-3@2x.webp 2x">
+                    <img class="information__producer-image" src="img/content/information-photo-3.jpg" srcset="img/content/information-photo-3@2x.jpg 2x" width="300" height="365" alt=".">
+                  </picture>
                 </div>
                 <span class="information__producer-name">Скарлетт Йоханссон</span>
               </li>
               <li class="information__producer-item">
-                <div class="information__image-containe">
-                  <img class="information__producer-image" src="img/content/information-photo-4.jpg" srcset="img/content/information-photo-4@2x.jpg 2x" width="300" height="290" alt=".">
+                <div class="information__image-container">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/information-photo-4.webp 1x, img/content/information-photo-4@2x.webp 2x">
+                    <img class="information__producer-image" src="img/content/information-photo-4.jpg" srcset="img/content/information-photo-4@2x.jpg 2x" width="300" height="290" alt=".">
+                  </picture>
                 </div>
                 <span class="information__producer-name">Стэн Ли</span>
               </li>
@@ -134,38 +197,42 @@
             <p class="information__history-description">
               <span>предыстория</span> Наташи Романофф до того, как она стала одной из команды Мстителей</p>
             <div class="information__history-container">
-              <img class="information__history-image" src="img/content/information-natasha.png" srcset="img/content/information-natasha@2x.png 2x" width="455" height="605" alt=".">
+              <picture>
+                <source type="image/webp" srcset="img/content/information-natasha.webp 1x, img/content/information-natasha@2x.webp 2x">
+                <img class="information__history-image" src="img/content/information-natasha.png" srcset="img/content/information-natasha@2x.png 2x" width="455" height="605" alt=".">
+              </picture>
             </div>
         </div>
       </section>
 
       <!-- В ролях -->
 
+      <p><a name="actor-link"></a></p>
       <section class="actor">
         <div class="actor__contaier container">
           <h2 class="actor__title">Герои</h2>
           <dl class="actor__list">
-            <a class="actor__item" href="#">
+            <a class="actor__item">
               <dt class="actor__name">Скарлет Йоханссон</dt>
               <dd class="actor__character">Черная Вдова</dd>
             </a>
-            <a class="actor__item" href="#">
+            <a class="actor__item">
               <dt class="actor__name">Флоренс Пью</dt>
               <dd class="actor__character">Елена Белова</dd>
             </a>
-            <a class="actor__item actor__item--current" href="#">
+            <a class="actor__item actor__item--current">
               <dt class="actor__name">ДэВид Харбор</dt>
               <dd class="actor__character">Красный Страж</dd>
             </a>
-            <a class="actor__item" href="#">
+            <a class="actor__item">
               <dt class="actor__name">Рэйчел Вайс</dt>
               <dd class="actor__character">Мелина Востокофф</dd>
             </a>
-            <a class="actor__item" href="#">
+            <a class="actor__item">
               <dt class="actor__name">Ольга Куриленко</dt>
               <dd class="actor__character">Таскмастер</dd>
             </a>
-            <a class="actor__item" href="#">
+            <a class="actor__item">
               <dt class="actor__name">О.Т. Фагбенли</dt>
               <dd class="actor__character">Рик Мэйсон</dd>
             </a>
@@ -175,6 +242,7 @@
 
       <!-- Отзывы -->
 
+      <p><a name="review-link"></a></p>
       <section class="review">
         <div class="container">
           <div class="review__title-container">
@@ -189,7 +257,10 @@
               <li class="review__item">
                 <div class="review__people">
                   <div class="review__people-container">
-                    <img class="review__people-image" src="img/content/review-photo-1.jpg" srcset="img/content/review-photo-1@2x.jpg 2x" width="300" height="310" alt=".">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/review-photo-1.webp 1x, img/content/review-photo-1@2x.webp 2x">
+                      <img class="review__people-image" src="img/content/review-photo-1.jpg" srcset="img/content/review-photo-1@2x.jpg 2x" width="300" height="310" alt=".">
+                    </picture>
                   </div>
                   <span class="review__name">Наталья Григорьева</span>
                   <span class="review__job">Кино-театр.РУ</span>
@@ -202,7 +273,10 @@
               <li class="review__item">
                 <div class="review__people">
                   <div class="review__people-container">
-                    <img class="review__people-image" src="img/content/review-photo-2.jpg" srcset="img/content/review-photo-2@2x.jpg 2x" width="300" height="310" alt=".">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/review-photo-2.webp 1x, img/content/review-photo-2@2x.webp 2x">
+                      <img class="review__people-image" src="img/content/review-photo-2.jpg" srcset="img/content/review-photo-2@2x.jpg 2x" width="300" height="310" alt=".">
+                    </picture>
                   </div>
                   <span class="review__name">Александр Минин</span>
                   <span class="review__job">25-й Кадр</span>
@@ -229,13 +303,17 @@
               </div>
             </div>
             <div class="advantages__image-container">
-              <img class="advantages__image" src="img/content/advantages-natasha.png" srcset="img/content/advantages-natasha@2x.png 2x" width="589" height="690" alt=".">
+              <picture>
+                <source type="image/webp" srcset="img/content/advantages-natasha.webp 1x, img/content/advantages-natasha@2x.webp 2x">
+                <img class="advantages__image" src="img/content/advantages-natasha.png" srcset="img/content/advantages-natasha@2x.png 2x" width="589" height="690" alt=".">
+              </picture>
             </div>
           </div>
       </section>
 
       <!-- Другие фильмы -->
 
+      <p><a name="advertising-link"></a></p>
       <section class="advertising">
         <div class="advertising__container container">
           <h2 class="advertising__title">другие фильмы серии</h2>
@@ -243,37 +321,55 @@
           <ul class="advertising__list">
             <li class="advertising__item advertising__item-endgame">
               <a class="advertising__link" href="#" target="_blank">
-                <img class="advertising__image" src="img/advertising/avangers-endgame.jpg" srcset="img/advertising/avangers-endgame@2x.jpg 2x" width="630" height="400" alt=".">
+                <picture>
+                  <source type="image/webp" srcset="img/advertising/avangers-endgame.webp 1x, img/advertising/avangers-endgame@2x.webp 2x">
+                  <img class="advertising__image" src="img/advertising/avangers-endgame.jpg" srcset="img/advertising/avangers-endgame@2x.jpg 2x" width="630" height="400" alt=".">
+                </picture>
                 <span class="advertising__link-title">Мстители: финал</span>
               </a>
             </li>
             <li class="advertising__item">
               <a class="advertising__link" href="#" target="_blank">
-                <img class="advertising__image" src="img/advertising/avangers-infinity-war.jpg" srcset="img/advertising/avangers-infinity-war@2x.jpg 2x" width="300" height="400" alt=".">
+                <picture>
+                  <source type="image/webp" srcset="img/advertising/avangers-infinity-war.webp 1x, img/advertising/avangers-infinity-war@2x.webp 2x">
+                  <img class="advertising__image" src="img/advertising/avangers-infinity-war.jpg" srcset="img/advertising/avangers-infinity-war@2x.jpg 2x" width="300" height="400" alt=".">
+                </picture>
                 <span class="advertising__link-title">Мстители: Война Бесконечности</span>
               </a>
             </li>
             <li class="advertising__item">
               <a class="advertising__link" href="#" target="_blank">
-                <img class="advertising__image" src="img/advertising/captain-america-civil-war.jpg" srcset="img/advertising/captain-america-civil-war@2x.jpg 2x" width="300" height="400" alt=".">
+                <picture>
+                  <source type="image/webp" srcset="img/advertising/captain-america-civil-war.webp 1x, img/advertising/captain-america-civil-war@2x.webp 2x">
+                  <img class="advertising__image" src="img/advertising/captain-america-civil-war.jpg" srcset="img/advertising/captain-america-civil-war@2x.jpg 2x" width="300" height="400" alt=".">
+                </picture>
                 <span class="advertising__link-title">Первый миститель: Противостояние</span>
               </a>
             </li>
             <li class="advertising__item">
               <a class="advertising__link" href="#" target="_blank">
-                <img class="advertising__image" src="img/advertising/avangers.jpg" srcset="img/advertising/avangers@2x.jpg 2x" width="300" height="400" alt=".">
+                <picture>
+                  <source type="image/webp" srcset="img/advertising/avangers.webp 1x, img/advertising/avangers@2x.webp 2x">
+                  <img class="advertising__image" src="img/advertising/avangers.jpg" srcset="img/advertising/avangers@2x.jpg 2x" width="300" height="400" alt=".">
+                </picture>
                 <span class="advertising__link-title">Мстители</span>
               </a>
             </li>
             <li class="advertising__item">
               <a class="advertising__link" href="#" target="_blank">
-                <img class="advertising__image" src="img/advertising/captain-america-winter.jpg" srcset="img/advertising/captain-america-winter@2x.jpg 2x" width="300" height="400" alt=".">
+                <picture>
+                  <source type="image/webp" srcset="img/advertising/captain-america-winter.webp 1x, img/advertising/captain-america-winter@2x.webp 2x">
+                  <img class="advertising__image" src="img/advertising/captain-america-winter.jpg" srcset="img/advertising/captain-america-winter@2x.jpg 2x" width="300" height="400" alt=".">
+                </picture>
                 <span class="advertising__link-title">Первый миститель: Другая война</span>
               </a>
             </li>
             <li class="advertising__item advertising__item-ultron">
               <a class="advertising__link" href="#" target="_blank">
-                <img class="advertising__image" src="img/advertising/avangers-age-of-ultron.jpg" srcset="img/advertising/avangers-age-of-ultron@2x.jpg 2x" width="630" height="400" alt=".">
+                <picture>
+                  <source type="image/webp" srcset="img/advertising/avangers-age-of-ultron.webp 1x, img/advertising/avangers-age-of-ultron@2x.webp 2x">
+                  <img class="advertising__image" src="img/advertising/avangers-age-of-ultron.jpg" srcset="img/advertising/avangers-age-of-ultron@2x.jpg 2x" width="630" height="400" alt=".">
+                </picture>
                 <span class="advertising__link-title">Мстители: Эра Альтрона</span>
               </a>
             </li>
@@ -289,11 +385,26 @@
         <img class="promotion__logo" src="img/logo/logo-black-widow.png" srcset="img/logo/logo-black-widow@2x.png 2x" width="209" height="45" alt=".">
         <a class="button promotion__button" href="#">Купить билет</a>
         <div class="promotion__image-container">
-          <img class="promotion__image" src="img/content/promotion-image-1.jpg" srcset="img/content/promotion-image-1@2x.jpg 2x" width="300" height="163" alt=".">
-          <img class="promotion__image promotion__image--2" src="img/content/promotion-image-2.jpg" srcset="img/content/promotion-image-2@2x.jpg 2x" width="211" height="165" alt=".">
-          <img class="promotion__image promotion__image--3" src="img/content/promotion-image-3.jpg" srcset="img/content/promotion-image-3@2x.jpg 2x" width="175" height="170" alt=".">
-          <img class="promotion__image promotion__image--4" src="img/content/promotion-image-4.jpg" srcset="img/content/promotion-image-4@2x.jpg 2x" width="300" height="161" alt=".">
-          <img class="promotion__image promotion__image--5" src="img/content/promotion-image-5.jpg" srcset="img/content/promotion-image-5@2x.jpg 2x" width="245" height="157" alt=".">
+          <picture>
+            <source type="image/webp" srcset="img/content/promotion-image-1.webp 1x, img/content/promotion-image-1@2x.webp 2x">
+            <img class="promotion__image" src="img/content/promotion-image-1.jpg" srcset="img/content/promotion-image-1@2x.jpg 2x" width="300" height="163" alt=".">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/content/promotion-image-2.webp 1x, img/content/promotion-image-2@2x.webp 2x">
+            <img class="promotion__image promotion__image--2" src="img/content/promotion-image-2.jpg" srcset="img/content/promotion-image-2@2x.jpg 2x" width="211" height="165" alt=".">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/content/promotion-image-3.webp 1x, img/content/promotion-image-3@2x.webp 2x">
+            <img class="promotion__image promotion__image--3" src="img/content/promotion-image-3.jpg" srcset="img/content/promotion-image-3@2x.jpg 2x" width="175" height="170" alt=".">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/content/promotion-image-4.webp 1x, img/content/promotion-image-4@2x.webp 2x">
+            <img class="promotion__image promotion__image--4" src="img/content/promotion-image-4.jpg" srcset="img/content/promotion-image-4@2x.jpg 2x" width="300" height="161" alt=".">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/content/promotion-image-5.webp 1x, img/content/promotion-image-5@2x.webp 2x">
+            <img class="promotion__image promotion__image--5" src="img/content/promotion-image-5.jpg" srcset="img/content/promotion-image-5@2x.jpg 2x" width="245" height="157" alt=".">
+          </picture>
         </div>
       </section>
     </main>
@@ -357,7 +468,7 @@
         <h2 class="visually-hidden"></h2>
         <div class="header__nav">
           <a class="header__link-marvel" href="#">
-            <img class="header__marvel-image" src="img/logo/logo-marvel.png" width="152" height="152" srcset="img/logo/logo-marvel@2x.png 2x" alt=".">
+            <svg class="header__marvel-image" height="1006" viewBox="-215.19000000000005 -86.608 1000 402.473" width="2500" xmlns="http://www.w3.org/2000/svg"><path d="M-215.19-86.608h1000v402.473h-1000z" fill="#ed1d24"/><path d="M631.063 7.184v-61.603H459.644l-28.191 205.803-27.896-205.802H341.74L348.665.497c-7.14-14.068-32.449-54.915-88.146-54.915-.367-.024-61.901 0-61.901 0l-.237 299.974-45.057-299.974-80.959-.047-46.612 310.814.024-310.769h-77.483l-27.933 174.585-27.208-174.583h-77.508v337.906h61.036v-162.87l27.764 162.866h32.449l27.374-162.866v162.866H81.935l7.14-51.995h47.374l7.116 51.995 115.521.071h.094v-.071h.144V173.799l14.162-2.063 29.319 111.819h59.752l-.024-.071h.178l-38.475-131.057c19.498-14.422 41.513-51.047 35.654-86.084v-.023c.07.474 36.316 217.38 36.316 217.38l71.065-.216L515.83-22.8v306.285h115.236v-60.773h-54.7v-77.496h54.7V83.518h-54.7V7.184zM96.265 177.905l16.758-144.461 17.4 144.461zm177.419-66.704c-4.697 2.278-9.595 3.417-14.363 3.417V5.927c.083 0 .179-.022.297-.022 4.78-.024 40.419 1.446 40.419 53.774 0 27.373-12.121 44.62-26.353 51.522m480.36 111.464v60.772H641.63V-54.465h60.526v277.13z" fill="#fff"/></svg>
           </a>
           <nav class="navigation navigation--footer">
             <ul class="navigation__list">
@@ -382,5 +493,6 @@
     </footer>
     <script src="js/burger.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/actor.js"></script>
   </body>
 </html>

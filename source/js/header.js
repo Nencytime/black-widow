@@ -1,5 +1,4 @@
 const header = document.querySelector('.header');
-const wrapper = document.querySelector('.header__menu-wrapper');
+const toggle = document.querySelector('.header__toggle');
 
-header.classList.remove('no-js');
-burger.addEventListener('click', () => header.classList.toggle('is-open'));
+toggle.addEventListener('click', () => header.classList.toggle('is-open'));

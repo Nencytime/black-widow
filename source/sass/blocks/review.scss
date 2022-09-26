@@ -2,19 +2,6 @@
   position: relative;
 
   padding-top: 120px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: -100%;
-    z-index: 1;
-
-    width: 1000%;
-    height: 1%;
-
-    background-color: $color-alizarin;
-  }
 }
 
 .review__title-container {
@@ -63,6 +50,13 @@
     @media (min-width: $tablet-width) {
       display: flex;
       flex-direction: column;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+
+      gap: 45px;
+      grid-template-columns: 2fr 1.9fr;
     }
   }
 
@@ -121,6 +115,7 @@
   z-index: -1;
   display: block;
   object-fit: cover;
+  object-position: top;
   width: 100%;
 
   @media (min-width: $tablet-width) {

@@ -1,5 +1,5 @@
 .information {
-  padding-top: 200px;
+  padding-top: 100px;
 
   @media (min-width: $tablet-width) {
     padding-top: 140px;
@@ -107,25 +107,29 @@
 }
 
 .information__people-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 0 83px;
   padding: 0;
 
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 83px;
+  }
 }
 
 .information__people-item {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  padding: 5px 0;
 
   transition-duration: 300ms;
   transition-property: transform;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.03);
     cursor: pointer;
   }
 
@@ -170,6 +174,10 @@
   }
 }
 
+/* .information__producer {
+  margin: 0 auto;
+} */
+
 .information__producer-list {
   margin: 0 0 70px;
   padding: 0;
@@ -208,12 +216,38 @@
   }
 }
 
+.information__image-containe {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 300px;
+    height: 348px;
+
+    background-image: url("../img/background/mask.png");
+    background-size: cover;
+
+    @media (min-width: $desktop-width) {
+      width: 100%;
+    }
+  }
+}
+
 .information__producer-image {
   z-index: -1;
 
   display: block;
 
   object-fit: cover;
+  object-position: top;
+  min-width: 100%;
+  max-width: 450px;
   margin-bottom: 20px;
 }
 
@@ -232,7 +266,7 @@
 .information__history-image {
   display: block;
   max-width: none;
-  margin-right: -75px;
+  margin: 0 -75px 0 auto;
 
   @media (min-width: $tablet-width) {
     object-fit: cover;
@@ -260,7 +294,7 @@
 
 .information__history-description {
   margin: 0 0 50px;
-  padding: 0;
+  padding: 0 0 0 15px;
 
   font-weight: 700;
   font-size: 40px;
@@ -275,28 +309,5 @@
 
   span {
     color: $color-alizarin;
-  }
-}
-
-.information__image-containe {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    width: 300px;
-    height: 348px;
-
-    background-image: url("../img/background/mask.png");
-    background-size: cover;
-
-    @media (min-width: $desktop-width) {
-      width: 100%;
-    }
   }
 }
