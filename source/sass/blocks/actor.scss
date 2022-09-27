@@ -51,8 +51,9 @@
     align-items: baseline;
   }
 
-  &:hover:not(.actor__item--current) {
+  &:hover:not(&--current) {
     transform: scale(1.03);
+    cursor: pointer;
   }
 }
 
@@ -83,16 +84,25 @@
     @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
-      top: -175%;
-      left: 26%;
+      top: -85%;
+      left: 30%;
       z-index: 1;
 
-      width: 300px;
-      height: 420px;
+      width: 25%;
+      height: 300%;
 
       background-image: url("../img/background/actor-harbour.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: top;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -175%;
+      left: 26%;
+      height: 450%;
+      max-width: 300px;
+      max-height: 420px;
     }
   }
 }

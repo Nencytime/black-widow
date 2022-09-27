@@ -33,6 +33,7 @@
       background-image: url("../img/background/header-background.png");
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
     }
   }
 
@@ -44,13 +45,13 @@
     right: 0;
     height: 10px;
     background-color: $color-black;
-    width: 600px;
+    width: 50%;
     box-shadow: 0 0 65px 80px $color-black;
 
     @media (min-width: $tablet-width) {
       bottom: -50px;
       height: 100px;
-      right: 20px;
+      right: 0;
       box-shadow: 0 0 65px 75px $color-black;
     }
   }
@@ -108,12 +109,14 @@
   margin: 0 0 0 15px;
   padding: 0;
 
-  @media (min-width: $tablet-width) {
-    margin: 0;
-  }
 
   .is-open & {
     display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin: 0;
   }
 }
 
@@ -159,8 +162,8 @@
 
 .header__menu-wrapper {
   position: absolute;
-  top: 8px;
-  right: 5px;
+  top: 10px;
+  right: 20px;
   padding: 0 10px 20px;
   width: 60px;
   height: 65px;
