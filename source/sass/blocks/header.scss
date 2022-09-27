@@ -64,10 +64,11 @@
 }
 
 .header__info {
-  margin-top: 210px;
+  margin-top: 60px;
   padding: 0 15px 30px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 210px;
     padding: 0;
   }
 }

@@ -6,17 +6,53 @@
   line-height: 16px;
   font-weight: 500;
   color: $color-white;
-  background-color: $color-alizarin;
+
   text-transform: uppercase;
   text-decoration: none;
-  border: none;
+
   width: max-content;
 
   transition-duration: 300ms;
-  transition-property: transform;
+  transition-property: all;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.button__ticket {
+  background-color: $color-alizarin;
+  border: none;
+
+  &:hover {
+    background-color: #c32227;
+  }
+}
+
+.button__trailer {
+  margin: 0 auto;
+  width: 184px;
+  height: 190px;
+  background-image: url("../img/background/trailer.svg");
+  background-repeat: no-repeat;
+  background-size: 184px 190px;
+
+  transition-duration: 500ms;
+
+  @media (min-width: $tablet-width) {
+    width: 93px;
+    height: 97px;
+    margin-left: 85px;
+    background-size: 93px 97px;
+  }
+
+  &:hover {
+    transform: rotate(360deg) scale(1.15);
     cursor: pointer;
   }
 
