@@ -1,0 +1,142 @@
+.modal {
+  &.modal-close {
+    display: none;
+  }
+
+  &.modal-open {
+    display: block;
+  }
+
+  position: fixed;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-black, 0.8);
+  z-index: 3;
+}
+
+.modal__container {
+  position: relative;
+  margin: auto;
+  top: 10%;
+  padding: 40px 25px 30px 30px;
+  background-color: $color-white;
+  color: $color-black;
+  width: 60%;
+  max-width: 350px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 53px 60px 83px;
+    width: 435px;
+    max-width: none;
+  }
+}
+
+.modal__button {
+  position: absolute;
+  padding: 10px;
+  right: 15px;
+  top: 20px;
+  border: none;
+  background-color: $color-transparent;
+  width: 14px;
+  height: 21px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: #151515;
+  }
+
+  &::before {
+    transform: rotate(-30deg);
+  }
+
+  &::after {
+    transform: rotate(30deg);
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.modal__title {
+  padding: 0;
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $color-alizarin;
+
+  @media (min-width: $tablet-width) {
+    font-size: 38px;
+  }
+}
+
+.modal__description {
+  padding: 0;
+  margin: 0 0 25px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+}
+
+.modal__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.modal__item {
+  width: 160px;
+  height: 45px;
+  border: 1px solid #777777;
+  margin-bottom: 15px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 196px;
+    height: 65px;
+  }
+
+  &--special {
+    background-color: $color-alizarin;
+    border: none;
+  }
+}
+
+.modal__svg {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__info {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  line-height: 140%;
+  color: #585858;
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+  }
+}

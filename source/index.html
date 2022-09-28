@@ -25,9 +25,7 @@
         <div class="navigation__container navigation__container--header">
           <nav class="navigation navigation--header">
             <a class="header__link-marvel" href="#">
-              <svg class="header__marvel-image" height="1006" width="2500">
-                <use href="img/sprite.svg#marvel-logo"></use>
-              </svg>
+              <img class="header__marvel-image" src="img/logo/marvel-logo.svg" height="1006" width="2500" alt="Логотип Marvel.">
             </a>
             <button class="header__toggle header__menu-wrapper" type="button">
               <div class="header__menu-burger"></div>
@@ -385,7 +383,9 @@
         <h2 class="promotion__title">погрузись во вселенную <span>марвел</span>
         </h2>
         <img class="promotion__logo" src="img/logo/logo-black-widow.png" srcset="img/logo/logo-black-widow@2x.png 2x" width="209" height="45" alt=".">
-        <a class="button button__ticket" href="#">Купить билет</a>
+        <div class="button button__ticket button__second-ticket">
+          <a class="link-animation link__ticket" href="#">Купить билет</a>
+        </div>
         <div class="promotion__image-container">
           <picture>
             <source type="image/webp" srcset="img/content/promotion-image-1.webp 1x, img/content/promotion-image-1@2x.webp 2x">
@@ -469,9 +469,7 @@
       <section class="navigation__footer-section container">
         <h2 class="visually-hidden">Навигация</h2>
         <a class="header__link-marvel" href="#">
-          <svg class="header__marvel-image" height="1006" width="2500">
-            <use href="img/sprite.svg#marvel-logo"></use>
-          </svg>
+          <img class="header__marvel-image" src="img/logo/marvel-logo.svg" height="1006" width="2500" alt="Логотип Marvel.">
         </a>
         <div class="navigation__container navigation__container--footer">
           <nav class="navigation navigation--footer">
@@ -503,8 +501,45 @@
       </section>
       <p class="footer__info container">16+ (Информационная продукция, опубликованная на данном сайте, предназначена для аудитории в возрасте от 16 лет, если иное не указано дополнительно в отношении отдельных материалов)</p>
     </footer>
+
+    <section class="modal modal-close">
+      <div class="modal__container">
+        <button class="modal__button" type="button" aria-label="Закрыть окно">
+        </button>
+        <h2 class="modal__title">Купить билет</h2>
+        <p class="modal__description">Воспользуйтесь одним из сервисов</p>
+        <ul class="modal__list">
+          <li class="modal__item link-animation">
+            <a class="modal__link" href="#" aria-label="Купить билет через сервис Киноход">
+              <picture>
+                <source type="image/webp" srcset="img/logo/modal-kinohod.webp 1x, img/logo/modal-kinohod@2x@2x.webp 2x">
+                <img class="modal__svg" src="img/logo/modal-kinohod.png" srcset="img/logo/modal-kinohod@2x.png 2x" width="148" height="29" alt="Логотип Киноход.">
+              </picture>
+            </a>
+          </li>
+          <li class="modal__item modal__item--special link-animation">
+            <a class="modal__link" href="#" aria-label="Купить билет через сервис Рамблер">
+              <picture>
+                <source type="image/webp" srcset="img/logo/modal-rambler.webp 1x, img/logo/modal-rambler@2x@2x.webp 2x">
+                <img class="modal__svg" src="img/logo/modal-rambler.png" srcset="img/logo/modal-rambler@2x.png 2x" width="143" height="32" alt="Логотип Рамблер.">
+              </picture>
+            </a>
+          </li>
+          <li class="modal__item  link-animation">
+            <a class="modal__link" href="#" aria-label="Купить билет через сервис Яндекс-Афиша">
+              <picture>
+                <source type="image/webp" srcset="img/logo/modal-yandex.webp 1x, img/logo/modal-yandex@2x@2x.webp 2x">
+                <img class="modal__svg" src="img/logo/modal-yandex.png" srcset="img/logo/modal-yandex@2x.png 2x" width="158" height="40" alt="Логотип Яндекс-Афиши.">
+              </picture>
+            </a>
+          </li>
+        </ul>
+        <p class="modal__info">Услуга предоставляется сервисами Киноход, Рамблер.Касса, Яндекс Афиша, которые производят обработку персональных данных при покупке билета</p>
+      </div>
+    </section>
     <script src="js/burger.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/actor.js"></script>
   </body>
 </html>

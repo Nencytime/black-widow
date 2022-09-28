@@ -1,10 +1,23 @@
 .header {
+  position: relative;
   padding: 30px 0;
   width: 100%;
 
   &.is-open {
     background-color: $color-alizarin;
   }
+
+  /* &::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 1000px;
+    height: 100%;
+    background-image: url("../img/background/mask.png");
+    background-repeat: no-repeat;
+  } */
 
   @media (min-width: $tablet-width) {
     padding: 60px 69px 0 72px;
@@ -45,14 +58,21 @@
     right: 0;
     height: 10px;
     background-color: $color-black;
-    width: 50%;
+    width: 100%;
     box-shadow: 0 0 65px 80px $color-black;
 
     @media (min-width: $tablet-width) {
       bottom: -50px;
-      height: 100px;
+      height: 50px;
       right: 0;
-      box-shadow: 0 0 65px 75px $color-black;
+      width: 50%;
+      box-shadow: 0 0 75px 85px $color-black;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: -75px;
+      height: 70px;
+      box-shadow: 0 0 90px 100px $color-black;
     }
   }
 }
@@ -154,6 +174,14 @@
   display: block;
   object-fit: cover;
   object-position: top;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    background-image: url("../img/background/mask-black.png");
+  }
 
   @media (min-width: $tablet-width) {
     display: none;

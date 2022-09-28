@@ -112,10 +112,6 @@
 
     background-image: url("../img/background/mask.png");
     background-size: cover;
-
-    @media (min-width: $tablet-width) {
-      width: 100%;
-    }
   }
 }
 
